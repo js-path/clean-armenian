@@ -16,7 +16,7 @@ function unacceptable(pwd) {
         /gyot/gi,
         /siktir/gi,
         /puc/gi,
-        /\s+pc/
+        /\s+pc/gi,
         /klir/gi,
         /qune/gi,
         /klr/gi,
@@ -26,7 +26,7 @@ function unacceptable(pwd) {
         /боз/gi,
         /гйот/gi,
         /гёт/gi,
-        /\s+пц/
+        /\s+пц/gi,
         /сиктир/gi,
         /сиктыр/gi,
         /пуц/gi,
@@ -52,4 +52,5 @@ function unacceptable(pwd) {
 
     return pwd;
 }
+
 console.log(unacceptable("պուց պցով клир ejպցoeo սիկտիր dvefve gyot"))
