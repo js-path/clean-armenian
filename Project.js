@@ -1,4 +1,4 @@
-function unacceptable(pwd) {
+function unacceptable(UserInput) {
 
     var unforgivable = [
         /Բոզ/gi,
@@ -44,13 +44,12 @@ function unacceptable(pwd) {
 
     let zamenitel = ["😂","🤬","🤫" ]
     for (i = 0; i < unforgivable.length; i++) {
-        pwd = pwd.replace(unforgivable[i], zamenitel[index])
+        UserInput = UserInput.replace(unforgivable[i], zamenitel[index])
         index = getRandomInt(3)
     }
    
 
 
-    return pwd;
+    return UserInput;
 }
 
-console.log(unacceptable("պուց պցով клир ejպցoeo սիկտիր dvefve gyot"))
