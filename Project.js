@@ -1,6 +1,6 @@
-function unacceptable(UserInput) {
+function Censor (UserInput) {
 
-    var unforgivable = [
+    var ToBeCensored = [
         /Բոզ/gi,
         /Գյոթ/gi,
         /Սիկտիր/gi,
@@ -16,7 +16,7 @@ function unacceptable(UserInput) {
         /gyot/gi,
         /siktir/gi,
         /puc/gi,
-        /\s+pc/gi,
+        /\s+pc\S/gi,
         /klir/gi,
         /qune/gi,
         /klr/gi,
@@ -42,9 +42,9 @@ function unacceptable(UserInput) {
     
     let index = 0;
 
-    let zamenitel = ["😂","🤬","🤫" ]
-    for (i = 0; i < unforgivable.length; i++) {
-        UserInput = UserInput.replace(unforgivable[i], zamenitel[index])
+    let Substitute = ["😂","🤬","🤫" ]
+    for (i = 0; i < ToBeCensored.length; i++) {
+        UserInput = UserInput.replace(ToBeCensored[i], Substitute[index])
         index = getRandomInt(3)
     }
    
@@ -52,4 +52,3 @@ function unacceptable(UserInput) {
 
     return UserInput;
 }
-
