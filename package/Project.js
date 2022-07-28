@@ -1,4 +1,8 @@
+<<<<<<< HEAD:package/Project.js
 const Censor = function (UserInput) {
+=======
+function Censor (UserInput) {
+>>>>>>> 8acb69fdc1e11a9d3defb2ffb939801397cf4e60:Project.js
 
     var ToBeCensored = [
         /Բոզ/gi,
@@ -48,9 +52,7 @@ const Censor = function (UserInput) {
         index = getRandomInt(3)
     }
    
-return UserInput
-
-
-}
+return UserInput}
 
 exports.Censor = Censor
+
