@@ -1,6 +1,6 @@
-function unacceptable(pwd) {
+const Censor = function (UserInput) {
 
-    var unforgivable = [
+    var ToBeCensored = [
         /Բոզ/gi,
         /Գյոթ/gi,
         /Սիկտիր/gi,
@@ -16,7 +16,7 @@ function unacceptable(pwd) {
         /gyot/gi,
         /siktir/gi,
         /puc/gi,
-        /\s+pc/gi,
+        /\s+pc\S/gi,
         /klir/gi,
         /qune/gi,
         /klr/gi,
@@ -42,15 +42,15 @@ function unacceptable(pwd) {
     
     let index = 0;
 
-    let zamenitel = ["😂","🤬","🤫" ]
-    for (i = 0; i < unforgivable.length; i++) {
-        pwd = pwd.replace(unforgivable[i], zamenitel[index])
+    let Substitute = ["😂","🤬","🤫" ]
+    for (i = 0; i < ToBeCensored.length; i++) {
+        UserInput = UserInput.replace(ToBeCensored[i], Substitute[index])
         index = getRandomInt(3)
     }
    
+return UserInput
 
 
-    return pwd;
 }
 
-console.log(unacceptable("պուց պցով клир ejպցoeo սիկտիր dvefve gyot"))
+exports.Censor = Censor
