@@ -1,6 +1,6 @@
 {
   "name": "clean-armenian",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Armenian censoring tool",
   "main": "Project.js",
   "scripts": {
@@ -14,12 +14,10 @@
     "Armenian",
     "Censor",
     "Clean"
-    
   ],
   "author": "HVNLB",
   "license": "ISC",
   "dependencies": {
-  "clean-armenian": "1.0.0"
+    "clean-armenian": "^1.0.3"
   }
-  
 }

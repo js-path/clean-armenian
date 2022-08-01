@@ -1,8 +1,4 @@
-<<<<<<< HEAD:package/Project.js
-const Censor = function (UserInput) {
-=======
-function Censor (UserInput) {
->>>>>>> 8acb69fdc1e11a9d3defb2ffb939801397cf4e60:Project.js
+module.exports = function  (Censor) {
 
     var ToBeCensored = [
         /Բոզ/gi,
@@ -48,11 +44,10 @@ function Censor (UserInput) {
 
     let Substitute = ["😂","🤬","🤫" ]
     for (i = 0; i < ToBeCensored.length; i++) {
-        UserInput = UserInput.replace(ToBeCensored[i], Substitute[index])
+        Censor = Censor.replace(ToBeCensored[i], Substitute[index])
         index = getRandomInt(3)
     }
    
-return UserInput}
-
-exports.Censor = Censor
+return Censor
+}
 
